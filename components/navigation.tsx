@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone } from 'lucide-react'
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -23,29 +23,25 @@ export default function Navigation() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+        <div className="flex justify-between items-center py-6">
+          {/* Logo Only */}
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/safepass-logo.png"
               alt="SafePass Driving School"
-              width={50}
-              height={50}
+              width={60}
+              height={60}
               className="object-contain"
             />
-            <div className="hidden sm:block">
-              <div className="font-bold text-xl text-gray-900">SafePass</div>
-              <div className="text-sm text-gray-600">Driving School</div>
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-green-600 font-medium transition-colors"
+                className="text-gray-700 hover:text-green-600 font-medium transition-colors text-sm whitespace-nowrap"
               >
                 {item.name}
               </Link>

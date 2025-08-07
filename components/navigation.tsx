@@ -24,13 +24,13 @@ export default function Navigation() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          {/* Logo Only */}
+          {/* Logo Only - Made Larger */}
           <Link href="/" className="flex items-center">
             <Image
               src="/images/safepass-logo.png"
               alt="SafePass Driving School"
-              width={60}
-              height={60}
+              width={120}
+              height={120}
               className="object-contain"
             />
           </Link>

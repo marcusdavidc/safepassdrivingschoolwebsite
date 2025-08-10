@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Award, Users, Clock, Shield } from "lucide-react"
+import { CheckCircle, Award, Users, Clock, Shield } from 'lucide-react'
 import Link from "next/link"
+import Image from "next/image"
 
 const specializations = [
   "Nervous/new drivers",
@@ -70,10 +71,12 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <img
-                src="/placeholder.svg?height=500&width=400"
-                alt="Nadi, professional driving instructor"
-                className="rounded-2xl shadow-lg w-full"
+              <Image
+                src="/images/nadi-instructor.jpeg"
+                alt="Nadi, professional driving instructor in his teaching vehicle"
+                width={500}
+                height={400}
+                className="rounded-2xl shadow-lg w-full object-cover"
               />
             </div>
           </div>

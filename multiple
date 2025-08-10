@@ -1,0 +1,182 @@
+// components/navigation.tsx
+import React from 'react';
+import Link from 'next/link';
+
+const Navigation = () => {
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Courses & Pricing", href: "/courses" },
+    { name: "Practice G1 Test", href: "/practice-test" },
+    { name: "Road Test Booking", href: "/road-test-booking" },
+    { name: "FAQ", href: "/faq" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  return (
+    <nav className="bg-gray-800">
+      <div className="container mx-auto px-4">
+        <ul className="flex justify-center space-x-4">
+          {navigation.map((item) => (
+            <li key={item.name}>
+              <Link href={item.href} className="text-white hover:text-gray-300">
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
+
+// components/footer.tsx
+import React from 'react';
+import Link from 'next/link';
+
+const Footer = () => {
+  return (
+    <footer className="bg-gray-800 text-white py-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="flex items-center">
+          <a href="mailto:safepassdriving@gmail.com" className="text-gray-400 hover:text-white">
+            safepassdriving@gmail.com
+          </a>
+          <span className="mx-4">|</span>
+          <a
+            href="https://www.facebook.com/profile.php?id=100094668114312"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white"
+          >
+            SafePass Driving School
+          </a>
+        </div>
+        <div className="space-y-2">
+          <Link href="/about" className="block text-gray-400 hover:text-white transition-colors">
+            About
+          </Link>
+          <Link href="/courses" className="block text-gray-400 hover:text-white transition-colors">
+            Courses & Pricing
+          </Link>
+          <Link href="/practice-test" className="block text-gray-400 hover:text-white transition-colors">
+            Practice G1 Test
+          </Link>
+          <Link href="/road-test-booking" className="block text-gray-400 hover:text-white transition-colors">
+            Road Test Booking
+          </Link>
+          <Link href="/faq" className="block text-gray-400 hover:text-white transition-colors">
+            FAQ
+          </Link>
+          <Link href="/contact" className="block text-gray-400 hover:text-white transition-colors">
+            Contact
+          </Link>
+        </div>
+        <div className="space-y-2 text-sm">
+          <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">
+            G1 BDE Program
+          </Link>
+          <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">
+            G2 Driving Lessons
+          </Link>
+          <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">
+            G Driving Lessons
+          </Link>
+          <Link href="/road-test-booking" className="text-gray-400 hover:text-white transition-colors">
+            Road Test Preparation
+          </Link>
+          <Link href="/courses" className="text-gray-400 hover:text-white transition-colors">
+            Winter Driving
+          </Link>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
+
+// app/contact/page.tsx
+import React from 'react';
+import Link from 'next/link';
+
+const ContactPage = () => {
+  return (
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Contact Details */}
+        <div className="bg-white p-6 rounded shadow">
+          <h2 className="text-xl font-bold mb-4">Contact Details</h2>
+          <div className="mb-4">
+            <h3 className="text-lg font-medium mb-2">Email</h3>
+            <a
+              href="mailto:safepassdriving@gmail.com"
+              className="text-green-600 hover:text-green-700 font-medium"
+            >
+              safepassdriving@gmail.com
+            </a>
+          </div>
+          <div>
+            <h3 className="text-lg font-medium mb-2">Facebook</h3>
+            <a
+              href="https://www.facebook.com/profile.php?id=100094668114312"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:text-green-700 font-medium"
+            >
+              SafePass Driving School
+            </a>
+          </div>
+        </div>
+        {/* Other contact details */}
+      </div>
+      {/* Alternative Contact */}
+      <div className="bg-gray-100 p-6 rounded shadow mt-8">
+        <h2 className="text-xl font-bold mb-4">Alternative Contact</h2>
+        <div>
+          <h3 className="text-lg font-medium mb-2">Email Us</h3>
+          <a
+            href="mailto:safepassdriving@gmail.com"
+            className="text-green-600 hover:text-green-700 font-medium break-all"
+          >
+            safepassdriving@gmail.com
+          </a>
+        </div>
+        {/* Other alternative contact options */}
+      </div>
+    </div>
+  );
+};
+
+export default ContactPage;
+
+// app/booking/page.tsx
+import React from 'react';
+import Link from 'next/link';
+
+const BookingPage = () => {
+  return (
+    <div className="container mx-auto py-8">
+      <h1 className="text-3xl font-bold mb-4">Book a Lesson</h1>
+      {/* Booking form */}
+      <div className="bg-gray-100 p-6 rounded shadow mt-8">
+        <h2 className="text-xl font-bold mb-4">Alternative Contact</h2>
+        <div>
+          <h3 className="text-lg font-medium mb-2">Email Us</h3>
+          <a
+            href="mailto:safepassdriving@gmail.com"
+            className="text-green-600 hover:text-green-700 font-medium break-all"
+          >
+            safepassdriving@gmail.com
+          </a>
+        </div>
+        {/* Other alternative contact options */}
+      </div>
+    </div>
+  );
+};
+
+export default BookingPage;

@@ -82,13 +82,18 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="h-4 w-4 text-green-500" />
-                <a href="mailto:safepassdrivingschool@gmail.com" className="text-gray-400 hover:text-white">
-                  safepassdrivingschool@gmail.com
+                <a href="mailto:safepassdriving@gmail.com" className="text-gray-400 hover:text-white">
+                  safepassdriving@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Facebook className="h-4 w-4 text-green-500" />
-                <a href="#" className="text-gray-400 hover:text-white">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100094668114312"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white"
+                >
                   Facebook
                 </a>
               </div>

@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Calendar, CreditCard, Phone, Mail } from "lucide-react"
+import { CheckCircle, CreditCard, Phone, Mail } from "lucide-react"
 import Link from "next/link"
+import CalendlyWidget from "@/components/calendly-widget"
 
 const bookingSteps = [
   {
@@ -78,36 +79,9 @@ export default function BookingPage() {
               <CardTitle className="text-3xl text-gray-900">Schedule Your Lesson</CardTitle>
               <p className="text-gray-600">Select a convenient time from our available slots below</p>
             </CardHeader>
-            <CardContent className="p-8">
-              {/* Calendly Embed Placeholder */}
-              <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-12 text-center space-y-4">
-                <Calendar className="h-16 w-16 text-gray-400 mx-auto" />
-                <h3 className="text-xl font-semibold text-gray-700">Calendly Booking Widget</h3>
-                <p className="text-gray-600">
-                  The Calendly booking widget would be embedded here, allowing students to:
-                </p>
-                <div className="text-left max-w-md mx-auto space-y-2">
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">View available time slots</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Select lesson type and duration</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Provide contact information</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    <span className="text-gray-700">Receive instant confirmation</span>
-                  </div>
-                </div>
-                <p className="text-sm text-gray-500 italic">
-                  To integrate: Replace this section with actual Calendly embed code
-                </p>
-              </div>
+            <CardContent className="p-0">
+              {/* Replace the URL below with your actual Calendly link */}
+              <CalendlyWidget url="https://calendly.com/your-calendly-username/lesson" height={800} />
             </CardContent>
           </Card>
         </div>

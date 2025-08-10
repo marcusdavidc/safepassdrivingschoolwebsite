@@ -4,7 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, Phone } from "lucide-react"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -12,7 +12,7 @@ const navigation = [
   { name: "Courses & Pricing", href: "/courses" },
   { name: "Practice G1 Test", href: "/practice-test" },
   { name: "Road Test Booking", href: "/road-test-booking" },
-  { name: "Blog", href: "/blog" },
+  // Blog removed per your request
   { name: "FAQ", href: "/faq" },
   { name: "Contact", href: "/contact" },
 ]
@@ -24,7 +24,7 @@ export default function Navigation() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          {/* Logo Only - Made Larger */}
+          {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/images/safepass-logo.png"
@@ -48,14 +48,14 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA: keep label, make it call */}
           <div className="hidden lg:flex items-center gap-4">
             <a href="tel:416-271-1295" className="flex items-center gap-2 text-gray-700 hover:text-green-600">
               <Phone className="h-4 w-4" />
               <span className="font-medium">416-271-1295</span>
             </a>
             <Button asChild className="bg-green-600 hover:bg-green-700 text-white">
-              <Link href="/booking">Book Lesson</Link>
+              <a href="tel:416-271-1295">Book Lesson</a>
             </Button>
           </div>
 
@@ -87,7 +87,7 @@ export default function Navigation() {
                   <span className="font-medium">416-271-1295</span>
                 </a>
                 <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white">
-                  <Link href="/booking">Book Lesson</Link>
+                  <a href="tel:416-271-1295">Book Lesson</a>
                 </Button>
               </div>
             </div>
